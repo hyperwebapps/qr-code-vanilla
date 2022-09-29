@@ -56,6 +56,7 @@
             </select>
             <button
               class="bg-gradient-to-r from-[#3b3f65] to-[#3b3b53] rounded w-full text-white py-3 px-4 mt-5"
+              type="submit"
             >
               Generate QR Code
             </button>
@@ -71,10 +72,10 @@
       </div>
       <div
         id="generated"
-        class="max-w-5xl m-auto flex flex-col text-center align-center dark:text-gray-600 fill-[#3b3f65]"
+        class="max-w-5xl m-auto flex flex-col text-center align-center dark:text-gray-600 fill-[#3b3f65] mt-10 md:mt-0"
       >
         <!-- Spinner Start -->
-        <div id="spinner" role="status">
+        <div id="spinner" role="status" class="hidden">
           <svg
             class="inline mr-2 w-24 h-24 text-gray-200 animate-spin dark:text-gray-600 fill-[#3b3f65]"
             viewBox="0 0 100 101"
@@ -93,17 +94,17 @@
           <span class="sr-only">Loading...</span>
         </div>
         <!-- Spinner End -->
-        <div id="qr-code" class="m-auto"></div>
+        <div id="qrcode" class="m-auto"></div>
       </div>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="js/script.js" type="text/javascript" defer></script>
+      <script src="tailwind.config.js" type="text/javascript" defer></script>
     </main>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/script.js"></script>
-    <script src="tailwind.config.js"></script>
   </body>
 </html>
